@@ -16,6 +16,7 @@ html{
 body{
   margin: 0;
   padding: 0;
+  width: 100vw;
   height: calc(100 * var(--vh));
   background-color: #f2f2fe;
   -webkit-user-drag: none;
@@ -73,9 +74,7 @@ a{
   display: flex;
   padding: 0 1rem;
   flex-direction: column;
-  &.is-fullheight{
-    height: calc(100 * var(--vh));
-  }
+  &.is-fullheight{ height: calc(100 * var(--vh)); }
 }
 
 .hero-body {
