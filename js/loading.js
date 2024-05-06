@@ -14,7 +14,7 @@ function isFirstTimeVisit() {
 if (isFirstTimeVisit()) {
   const loadingTl = gsap.timeline();
   loadingTl.to(loading, {
-      delay: 3.3,
+      delay: 2.7,
       duration: 0,
       autoAlpha: 1
   }).to(loading, {

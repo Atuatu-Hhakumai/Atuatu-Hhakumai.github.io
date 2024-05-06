@@ -26,19 +26,19 @@ body{
 @font-face {
   font-family: 'NotoSans';
   font-weight: 320;
-  src: url('../fonts/NotoSansJP.woff2') format('woff2');
+  src: url('../font/NotoSansJP.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Satoshi';
   font-weight: 400;
-  src: url('../fonts/Satoshi.woff2') format('woff2');
+  src: url('../font/Satoshi.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'GeneralSans';
   font-weight: 400;
-  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2');
+  src: url('../font/GeneralSans-Regular.woff2') format('woff2');
 }
 
 @media(min-width:1000px){.sp{display: none !important;}}
