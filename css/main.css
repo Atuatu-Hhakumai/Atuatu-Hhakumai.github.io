@@ -62,7 +62,7 @@ a{
   text-decoration: none;
   font-size: .75rem;
   line-height: 1.3;
-  &s{
+  & s{
     font-size: .75rem;
     line-height: 1;
   }
