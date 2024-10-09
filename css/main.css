@@ -58,7 +58,7 @@ body{
 
 :root { --vh: 1vh; }
 
-a{
+a,s{
   text-decoration: none;
   font-size: .75rem;
   line-height: 1.3;
