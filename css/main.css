@@ -19,7 +19,7 @@ body{
   width: 100vw;
   height: calc(100 * var(--vh));
   /*background-color: #f2f2fe;*/
-  background-color: #fff;
+  background-color: #D8DEE9;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
