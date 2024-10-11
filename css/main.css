@@ -87,7 +87,7 @@ a > s{
   display: flex;
   padding: 0 1rem;
   flex-direction: column;
-  &.is-fullheight{ height: calc(100 * var(--vh)); }
+  height: calc(100 * var(--vh));
 }
 
 .hero-body {
