@@ -18,7 +18,8 @@ body{
   padding: 0;
   width: 100vw;
   height: calc(100 * var(--vh));
-  background-color: #f2f2fe;
+  /*background-color: #f2f2fe;*/
+  background-color: #fff;
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
