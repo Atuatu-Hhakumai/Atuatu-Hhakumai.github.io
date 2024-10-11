@@ -38,7 +38,7 @@ body{
   src: url('../font/Satoshi-Variable.woff2') format('woff2'),
        url('../font/Satoshi-Variable.woff') format('woff'),
        url('../font/Satoshi-Variable.ttf') format('truetype');
-       font-weight: 300 900;
+       font-weight: 400;
        font-display: swap;
        font-style: normal;
 }
