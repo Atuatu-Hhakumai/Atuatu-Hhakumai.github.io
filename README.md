@@ -1,3 +1,3 @@
-# 仮設Webサイト
+# 仮設Webサイト  
 
-<a herf="http://atuatu-hhakumai.github.io">Visit Site</a>
+#### <a href="https://Atuatu-Hhakumai.github.io" target="_blank">Visit Site</a>
