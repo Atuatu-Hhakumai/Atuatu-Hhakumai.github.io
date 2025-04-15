@@ -1,76 +1,22 @@
-
-html{
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  min-width: 350px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  overscroll-behavior: none;
+.title {
+  font-size: 3rem;
+  line-height: 1;
+  font-family: "GeneralSans";
 }
 
-body{
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: calc(100 * var(--vh));
-  /*background-color: #f2f2fe;*/
-  background-color: #ECEFF4;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-@font-face {
-  font-family: 'NotoSans';
-  font-weight: 320;
-  src: url('../font/NotoSansJP.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('../font/Satoshi-Variable.woff2') format('woff2'),
-       url('../font/Satoshi-Variable.woff') format('woff'),
-       url('../font/Satoshi-Variable.ttf') format('truetype');
-       font-weight: 300 900;
-       font-display: swap;
-       font-style: normal;
-}
-
-@font-face {
-  font-family: 'GeneralSans';
-  font-weight: 400;
-  src: url('../font/GeneralSans-Regular.woff2') format('woff2');
-}
-
-@media(min-width:1000px){.sp{display: none !important;}}
-@media(max-width:1000px){.pc{display: none !important;}}
-
-* {
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: normal;
-  color: #111;
-  font-family: 'Satoshi';
-}
-
-:root { --vh: 1vh; }
-
-a, br{
-  text-decoration: none;
-  font-size: .75rem;
+p {
+  font-size: 0.75rem;
   line-height: 1.5;
 }
 
-a > s{
-  font-size: .75rem;
+a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+a > s {
+  font-size: 0.75rem;
   line-height: 1;
 }
 
@@ -79,45 +25,24 @@ a > s{
   margin: 0 auto;
   position: relative;
   width: 100%;
-  max-width: 1000px!important;
+  max-width: 1000px !important;
 }
 
-.hero {
-  height: calc(100 * var(--vh));
-  align-items: stretch;
-  display: flex;
-  padding: 0 1rem;
-  flex-direction: column;
-}
-
-.hero-body {
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.links{
-  margin-top: 1rem;
+.links {
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
 }
 
-.subtitle {
-  font-size: .75rem;
-  line-height: 1;
-  margin-top: 1.2rem;
+.main {
+  min-height: var(--full-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.title {
-  font-size: 3rem;
-  line-height: 1;
-  font-family: 'GeneralSans';
-}
-
-h1,h2{
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+.section {
+  padding: 0;
+  margin: 24vh 24px 24vh 24px;
 }
