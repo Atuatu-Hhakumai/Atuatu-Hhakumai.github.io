@@ -1,26 +1,19 @@
 .loading {
   width: 100vw;
-  height: calc(100 * var(--vh));
+  height: var(--full-height);
   position: fixed;
-  background-color: #000;
+  background-color: var(--main-text);
   z-index: 999;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.loading-content {
-  width: 100%;
-  height: var(--full-height);
-  padding: 0 1rem;
-  display: flex;
-  align-items: center;
-  max-width: 1000px !important;
+  padding: 24px;
 }
 
 .loading-text {
   font-size: 0.75rem;
   line-height: 1;
-  color: #e9e9e9;
+  color: var(--main-bg);
 }
 
 .loading-text:not(:first-child) {
@@ -28,7 +21,7 @@
 }
 
 #counter {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   line-height: 0;
-  color: #e9e9e9;
+  color: var(--main-bg);
 }
