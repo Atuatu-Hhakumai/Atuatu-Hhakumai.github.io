@@ -10,8 +10,9 @@
 }
 
 :root {
-  --main-text: #000000;
-  --main-bg: #eceff4;
+  --color-fill: #eceff4;
+  --color-fill-secondary: #000;
+  --color-emphasis: #f19d9d;
 }
 
 .blur {

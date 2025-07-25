@@ -15,6 +15,18 @@ General Sans
 https://www.fontshare.com/fonts/general-sans
 */
 @font-face {
+  font-family: "InstrumentSerifeneral";
+  src: url("InstrumentSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/*
+General Sans
+https://www.fontshare.com/fonts/general-sans
+*/
+@font-face {
   font-family: "GeneralSans";
   src: url("GeneralSans-Regular.woff2") format("woff2");
   font-weight: 400;

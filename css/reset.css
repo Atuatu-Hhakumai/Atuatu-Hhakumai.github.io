@@ -19,7 +19,7 @@ body {
   height: var(--full-height);
   min-width: 300px;
   overflow-x: hidden;
-  background-color: var(--main-bg);
+  background-color: var(--color-fill);
   -webkit-user-drag: none;
   -webkit-user-select: none;
   user-select: none;
