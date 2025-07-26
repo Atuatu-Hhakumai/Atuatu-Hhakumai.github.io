@@ -37,13 +37,12 @@
   font-family: "InstrumentSerifeneral";
   color: var(--color-emphasis);
 }
-
-/* [open] ::marker {
-  content: "📂";
+.title-small {
+  font-size: 2rem;
+  line-height: 1;
+  font-family: "InstrumentSerifeneral";
+  color: var(--color-emphasis);
 }
-::marker {
-  content: "📁";
-} */
 
 p,
 a,
@@ -57,19 +56,15 @@ summary {
   text-decoration: none;
   cursor: pointer;
 }
-a {
+details > a {
   display: block;
   line-block: 110%;
+  margin-inline-start: 0.75rem;
 }
 .document::before {
   content: "📄 ";
-  margin-inline-start: 0.75rem;
 }
 .link::before {
-  content: "🔗 ";
-  margin-inline-start: 0.75rem;
-}
-.link-no-margin::before {
   content: "🔗 ";
 }
 a:hover,
@@ -80,6 +75,67 @@ s {
   font-size: 0.75rem;
   line-height: 1;
   cursor: pointer;
+}
+
+.tab-title {
+  font-size: 0.75rem;
+}
+.tab-close {
+  font-size: 16px;
+  padding: 4px;
+  height: 100%;
+  aspect-ratio: 100 / 100 auto;
+  line-height: 100%;
+  text-align: center;
+}
+@media only screen and (max-width: 900px) {
+  .window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100vh;
+    padding: 40px 16px 16px 16px;
+    overflow: scroll;
+  }
+  .window > .tab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #dfe3e9;
+    width: 100%;
+    height: 24px;
+    padding-left: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .window {
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-60%, -50%);
+    width: 100%;
+    min-width: 260px;
+    max-width: 400px;
+    height: auto;
+    padding: 40px 16px 16px 16px;
+  }
+  .window > .tab {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #dfe3e9;
+    width: 100%;
+    height: 24px;
+    padding-left: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .container {

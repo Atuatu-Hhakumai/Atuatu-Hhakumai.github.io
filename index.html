@@ -24,12 +24,118 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/loading.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
-  <body>
+  <body x-data="{ MyServer: false, Createurs: false, iMac: false, MacBookProMid2012: false,}">
     <!-- Loading -->
     <section class="loading">
-      <p class="loading-text">Loading...(<span id="counter">0</span>%)</p>
+      <p class="loading-text">Loading..............(<span id="counter">0</span>%)</p>
     </section>
+    <!-- modal -->
+    <!-- iMac -->
+    <div class="window blur" x-show="iMac">
+      <div class="tab">
+        <span class="tab-title">🖥️&nbsp;iMac summer2000 SE</span>
+        <a class="tab-close" @click="iMac = false">&times;</a>
+      </div>
+      <h1 class="title-small">
+        iMac summer2000 SE
+      </h1>
+      <div class="container">
+        <p>
+          The design is so futuristic that you wouldn't doubt that this is the latest Mac.<br/>
+          The built-in Harman Kardon speakers sound great.<br/>
+          I really like the typing feel of the included Apple Pro Keyboard.<br/>
+          It's a bit lacking in terms of running OS X Tiger, but it's not a problem.
+        </p>
+        <div class="container">
+      </div>
+        <p>
+          OS = Mac OS X Tiger<br/>
+          CPU = PowerPC G3 500MHz<br/>
+          GPU = ATI RAGE 128 Pro<br/>
+          HDD = 30GB<br/>
+          RAM = 640MB
+        </p>
+      </div>
+      <div class="container">
+        <a class="link" href="https://support.apple.com/ja-jp/112527" target="_blank" rel="noopener">Tech Specs</a>
+      </div>
+    </div>
+    <!-- MacBook -->
+    <div class="window blur" x-show="MacBookProMid2012">
+      <div class="tab">
+        <span class="tab-title">💻&nbsp;MacBook Pro mid2012 Unibody</span>
+        <a class="tab-close" @click="MacBookProMid2012 = false">&times;</a>
+      </div>
+      <h1 class="title-small">
+        MacBook Pro mid2012
+      </h1>
+      <div class="container">
+        <p>
+          It runs so smoothly it's hard to believe it's a 10 year old computer.<br/>
+          The design is sleek and the trackpad and keyboard are comfortable to use.<br/>
+          But the display and speakers are terrible.
+        </p>
+        <div class="container">
+      </div>
+        <p>
+          OS = OS X Mavericks / macOS Catalina<br/>
+          CPU = Intel Core-i5 3210M<br/>
+          SSD = 256gb<br/>
+          RAM = 16GB
+        </p>
+      </div>
+      <div class="container">
+        <a class="link" href="https://support.apple.com/ja-jp/111958" target="_blank" rel="noopener">Tech Specs</a>
+      </div>
+    </div>
+    <!-- My Server -->
+    <div class="window blur" x-show="MyServer">
+      <div class="tab">
+        <span class="tab-title">💬&nbsp;Discord&nbsp;Community</span>
+        <a class="tab-close" @click="MyServer = false">&times;</a>
+      </div>
+      <h1 class="title-small">
+        My Discord Server
+      </h1>
+      <div class="container">
+        <p>
+          You can enter and exit freely.<br/>
+          talk about technology, design, music, etc.
+        </p>
+      </div>
+      <div class="container">
+        <a class="link" href="https://discord.gg/AKVpaZDuxz" target="_blank" rel="noopener">Join&nbsp;the&nbsp;community</a>
+      </div>
+    </div>
+    <!-- Createurs Server -->
+    <div class="window blur" x-show="Createurs">
+      <div class="tab">
+        <span class="tab-title">💬&nbsp;Créateurs Discord Community</span>
+        <a class="tab-close" @click="Createurs = false">&times;</a>
+      </div>
+      <h1 class="title-small">
+      Créateurs
+      </h1>
+      <div class="container">
+        <p>
+          This is my favorite server, run by Advizormcpe.<br/>
+          As the name suggests, it is a gathering of creators.<br/>
+          You can exchange geeky information about music, technology, art, and more.<br/>
+          Of course, anyone can participate.
+        </p>
+      </div>
+      <div class="container">
+        <a class="link" href="https://discord.gg/S9d7weGFuN" target="_blank" rel="noopener">Join&nbsp;the&nbsp;community</a>
+      </div>
+      <div class="container">
+        <img src="./pic/Créateurs.jpg" />
+      </div>
+    </div>
     <!-- main -->
     <main class="main">
       <section class="section">
@@ -38,7 +144,8 @@
         <div class="container">
           <p>
             I am a high school student in Japan.<br/>
-            I'm a fan of Apple computers and own an <span>iMac summer2000 SE</span>.<br/>
+            I'm a fan of Apple computers and own an <a class="document" @click="iMac = true">iMac summer2000 SE</a>.<br/>
+            I recently purchased a <a class="document" @click="MacBookProMid2012 = true">MacBook Pro mid2012</a>.<br/>
             I like listening to Funk, HipHop, Jazz, Fusion, etc.<br/>
             I like pudding(Important).
           </p>
@@ -46,10 +153,10 @@
         <!-- Comunity -->
         <details class="container">
           <summary>
-            Community
+            Discord Community
           </summary>
-          <a class="link" href="https://discord.gg/AKVpaZDuxz" target="_blank" rel="noopener">Discord&nbsp;Server</a>
-          <div class=""></div>
+          <a class="document" @click="MyServer = true">My Discord Server</a>
+          <a class="document" @click="Createurs = true">Créateurs</a>
         </details>
         <!-- Social -->
         <details class="container">
@@ -74,9 +181,15 @@
           <a class="link" href="https://shakekirehashi.netlify.app/" target="_blank" rel="noopener">Shake&nbsp;Kirehashi</a>
           <a class="link" href="https://global.atserver186.jp/" target="_blank" rel="noopener">AT&nbsp;Shift</a>
         </details>
+        <div class="container">
+          <p>
+            ©︎ 2024 Atuatu_Hhakumai All Rights Reserved.
+          </p>
+        </div>
       </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
     <script type="text/javascript" async src="./js/main.js"></script>
     <script type="text/javascript" async src="./js/loading.js"></script>
   </body>
