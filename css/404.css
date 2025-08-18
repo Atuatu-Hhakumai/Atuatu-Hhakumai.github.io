@@ -1,0 +1,70 @@
+.title-small {
+  font-size: 48px;
+  line-height: 1;
+  font-family: "InstrumentSerifeneral";
+  color: var(--color-emphasis);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 48px;
+  line-height: 1;
+  font-family: "InstrumentSerifeneral";
+  color: var(--color-emphasis);
+}
+
+p,
+a,
+span,
+summary {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a:hover {
+  color: var(--color-emphasis);
+}
+
+.tab-title {
+  font-size: 1rem;
+}
+
+.tab-close {
+  font-size: 18px;
+  width: 26px;
+  height: 26px;
+  aspect-ratio: 26 / 26 auto;
+  text-align: center;
+}
+
+.window > .tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #dfe3e9;
+  width: 100%;
+  height: 26px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.window {
+  position: fixed;
+  width: 100%;
+  min-width: 260px;
+  max-width: 400px;
+  height: auto;
+  padding: 40px 16px 16px 16px;
+  background-color: var(--color-fill);
+  box-shadow: 0 5px 10px rgba(000, 000, 000, 0.1);
+}
+
+.container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}

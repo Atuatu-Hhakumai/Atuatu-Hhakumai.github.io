@@ -2,7 +2,7 @@
   color: var(--main-text);
   font-family: "Satoshi";
   font-weight: 400;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 :root {
@@ -10,15 +10,15 @@
 }
 
 :root {
-  --color-fill-translucent: #eceff47c;
+  --color-fill-translucent: #eceff444;
   --color-fill: #eceff4;
   --color-fill-secondary: #000;
   --color-emphasis: #f19d9d;
 }
 
 .blur {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(20px);
   background-color: var(--color-fill-translucent);
   box-shadow: 0 5px 10px rgba(000, 000, 000, 0.1);
 }

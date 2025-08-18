@@ -48,6 +48,7 @@ body {
   box-sizing: border-box;
   overscroll-behavior: none;
   cursor: default;
+  -webkit-user-drag: none;
 }
 
 h1,
