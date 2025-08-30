@@ -117,7 +117,6 @@ s {
   font-size: 18px;
   height: 26px;
   width: 26px;
-  aspect-ratio: 100 / 100 auto;
   text-align: center;
 }
 .window > .tab {
