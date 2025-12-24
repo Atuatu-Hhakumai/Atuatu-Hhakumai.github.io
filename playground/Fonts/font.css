@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Saint";
+  src: url("./SaintRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Phosphene";
+  src: url("./PhospheneFont-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}

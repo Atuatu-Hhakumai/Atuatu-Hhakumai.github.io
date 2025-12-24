@@ -1,0 +1,86 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  min-width: 350px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  /*height: var(--full-height);*/
+  min-width: 300px;
+  overflow-x: hidden;
+  background-color: var(--color-fill);
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+* {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+  box-sizing: border-box;
+  cursor: default;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+p {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  unicode-bidi: isolate;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
+}

@@ -1,0 +1,142 @@
+/* テストのコンテナ */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6vw 6vw 6vw 6vw;
+}
+.box {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border: solid 1px;
+} 
+.box::before {
+  content: attr(data-label);
+  display: inline-block;
+  font-size: clamp(0px, 7vw, 70px);
+  height: clamp(0px, 7vw, 70px);
+  font-family: "Phosphene";
+  line-height: 100%;
+  background: #00ffc0;
+  transform: translate(-16px, clamp(-35px,  -3.5vw, 0px)) rotate(-5deg);
+}
+.view {
+  margin: 0 3vw 3vw 3vw;
+}
+
+.section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a{
+  color: #000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+a:hover{
+  background: #00ffc0;
+}
+
+h1{
+  font-size: clamp(0px, 11vw, 112px);
+  font-family: "Saint";
+  line-height: 100%;
+}
+
+.header{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ダイアログ */
+.info-view {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-image: repeating-linear-gradient(
+  -45deg,
+  transparent 0,
+  transparent 9px,
+  rgba(0,0,0,0.5) 10px
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 888;
+}
+h3 {
+  position: absolute;
+  font-size: clamp(0px, 9vw, 90px);
+  font-family: "Saint";
+  line-height: 100%;
+  background: #00ffc0;
+  font-size: clamp(0px, 9vw, 90px);
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0) rotate(-2deg);
+  z-index: 1111;
+} 
+.info{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  width: calc(100% - 20vmin);
+  height: calc(100% - 20vmin);
+  background: #fff;
+  z-index: 999;
+  border: solid;
+}
+.info p{
+  text-align: center;
+}
+.info-close {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #00ffc0;
+  height: clamp(0px,11vw, 60px);
+  aspect-ratio: 1 / 1 auto;
+  transform: translate3d(-50%, 50%, 0) rotate(3deg);
+  z-index: 1111;
+  cursor: pointer;
+}
+.info-close::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: clamp(0px,10vw, 50px);
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%) rotate(45deg);
+  cursor: pointer;
+}
+.info-close::after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: clamp(0px,10vw, 50px);
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%, -50%) rotate(-45deg);
+  cursor: pointer;
+}
