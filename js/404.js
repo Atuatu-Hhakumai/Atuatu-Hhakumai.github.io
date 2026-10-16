@@ -1,15 +1,10 @@
-// vhが信用できないから取得する。
-
 const Height = () => {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
   console.log(vh);
 };
-
 window.addEventListener("resize", Height);
 Height();
-
-// ウィンドウ
 
 let isDragging = false;
 let activeWindow = null;
@@ -17,11 +12,11 @@ let offsetX = 0;
 let offsetY = 0;
 let winZindex = 1;
 let i = 0;
-// ウィンドウの間隔
+
 let winTop = 16;
 let winLeft = 16;
-// 出現するウィンドウの数
-const maxWindows = 12;
+
+const maxWindows = Math.random() * (50 - 9) + 9;
 
 function createWindow() {
   if (i < maxWindows) {
@@ -55,36 +50,26 @@ function createWindow() {
 }
 createWindow();
 
-// ウィンドウが全部表示されたら
 function onAllWindowsCreated() {
-  // 閉じる
   document.querySelectorAll(".tab-close").forEach((close) => {
     close.addEventListener("click", () => {
-      const wind = close.closest(".window"); // ボタンが入ってるウィンドウを取得する
+      const wind = close.closest(".window");
       if (wind) {
         wind.style.display = "none";
       }
     });
   });
-
   const windows = document.querySelectorAll(".window").forEach((win) => {
-    // ウィンドウでマウスを下ろした時
     win.addEventListener("pointerdown", (event) => {
       isDragging = true;
       activeWindow = win;
-
-      // ウィンドウクリック時にZ Indexを更新する
       winZindex++;
       win.style.zIndex = winZindex;
-
-      // 掴んだ場所
       const rect = win.getBoundingClientRect();
       offsetX = event.clientX - rect.left;
       offsetY = event.clientY - rect.top;
     });
   });
-
-  // ドラッグ中の挙動
   document.addEventListener("pointermove", (event) => {
     if (isDragging && activeWindow) {
       activeWindow.style.top = "0px";
@@ -94,8 +79,6 @@ function onAllWindowsCreated() {
       activeWindow.style.transform = `translate3d(${X}px, ${Y}px, 0)`;
     }
   });
-
-  // ドラッグ終了時の処理
   document.addEventListener("pointerup", () => {
     isDragging = false;
     activeWindow = null;

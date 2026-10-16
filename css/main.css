@@ -151,6 +151,9 @@ s {
     overflow: scroll;
     box-shadow: 0 5px 10px rgba(000, 000, 000, 0.1);
   }
+  .window-body {
+    min-height: calc(100% - 26px);
+  }
 }
 @media only screen and (min-width: 600px) {
   .window {
